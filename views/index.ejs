@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/main.css">
+    <title>Tv Show Info</title>
+</head>
+<body>
+    <div class="container">
+        <div class="left-pan">
+            <h4 class="heading4">Enter TV show name below to search</h4>
+            <form id="myForm" method="post">
+                <div class="formDiv">
+                    <input type="text" name="tvShowSearchBox" id="showInput">
+                    <input type="submit" value="Search" formaction="/search">
+                </div>
+            </form>
+        </div>
+        <div class="right-pan">
+            <div class="card">
+                <!-- Fetching image(tv show poster/image) from api and sending that from server to client side -->
+                <img src="<%= imgSrc %>" alt="tvShow poster">
+                <h2>    <!-- Fetching show name from api and sending that from sever to client side -->
+                    <%= showName %>
+                </h2>
+                
+                <p>
+                    <%= summaryOfShow %>
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
